@@ -88,6 +88,10 @@ export default function Layout({ children }) {
         }
 
         /* NAVIGATION */
+        nav {
+          display: flex;
+          justify-content: center;
+        }
         nav ul {
           display: flex;
           gap: 24px;
