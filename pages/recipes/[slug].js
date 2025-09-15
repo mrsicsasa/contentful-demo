@@ -39,7 +39,7 @@ export const getStaticProps = async ({ params, preview = false }) => {
       recipe: items[0] || null,
       preview,
     },
-    revalidate: 60,
+      revalidate: preview ? undefined : 60,
   }
 }
 
