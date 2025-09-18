@@ -1,3 +1,5 @@
+
+export const runtime = "edge";
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -51,9 +53,12 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET() {
+
+const GET = async () => {
   return NextResponse.json({
     message: "Contentful webhook endpoint is active",
     timestamp: new Date().toISOString(),
   });
-}
+};
+
+export default GET;
